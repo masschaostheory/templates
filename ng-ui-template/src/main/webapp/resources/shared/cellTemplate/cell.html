@@ -1,0 +1,6 @@
+<div class="ngCellText" ng-class="col.colIndex()">
+	<a tooltip="{{row.getProperty(col.field)}}" tooltip-append-to-body="true" 
+		tooltip-placement="top" ng-cell-text >
+		<span ng-bind='row.getProperty(col.field)' class="word-wrap"></span>
+	</a>
+</div>

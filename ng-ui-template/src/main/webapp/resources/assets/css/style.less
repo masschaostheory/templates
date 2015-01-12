@@ -1,0 +1,96 @@
+@import 'animate.less';
+//http://thewaterbear.com/nested-animations-in-angularjs-using-ui-router/
+
+//MIXINS
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.backface {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.translate3d(@x, @y, @z) {
+  .backface;
+  -webkit-transform: translate3d(@x, @y, @z);
+     -moz-transform: translate3d(@x, @y, @z);
+       -o-transform: translate3d(@x, @y, @z);
+          transform: translate3d(@x, @y, @z);
+}
+
+html {
+  width: 100%;
+	height: 100%;
+}
+
+.login-container{
+  position: absolute;
+	height: 100%;
+	width:100%;
+	background-color:white;
+
+  .login-box {
+    .animated;
+    z-index: 20;
+    max-height: 200px;
+    margin:auto;
+    
+    position: absolute;
+	  top: 0px; left: 0; bottom: 75px; right: 0;
+  }
+}
+
+
+.tempAbs {
+  //mixin to temporarily make this position absolute  
+  //so it doesn't conflict with other divs
+  
+}
+
+
+//GLOBAL TRANSITION CLASS
+#masterUI {
+	.transition(all 1s); //if using child trasition animations, they should all be under this time value, keyframe animations are differen
+}
+
+
+
+#navbarMain {
+
+   .animated;
+    z-index:10;
+}
+
+
+
+
+#contentMain {
+  position: absolute;
+   width:100%;
+  .animated;
+  z-index:10;
+
+}
+
+
+
+
+#masterUI.ng-enter {
+  	#navbarMain{ .tempAbs;.fadeInDown; }
+  	#contentMain{ .fadeInUp; }
+   	.login-box {
+  		.fadeInUpBig;
+  	}
+}
+
+#masterUI.ng-leave {
+  	#navbarMain{ .tempAbs;.fadeOutUp; }
+  	#contentMain{ .fadeOutDown; }
+  	.login-box {
+		  .fadeOutDown;
+	  }
+}

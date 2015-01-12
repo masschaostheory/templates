@@ -1,0 +1,56 @@
+<div id="navbarMain">
+	<nav class="navbar navbar-default navbar-inverse" role="navigation"><!-- navbar-fixed-top -->
+		<div class="container-fluid">
+		
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNav">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ui-sref="dashboard.home" ng-click="collapseNavigation()">
+					{Application Name}
+				</a>
+				<!-- For image on header 
+				<div class="navbar-inner">
+			        <a class="navbar-brand" href="/home"> <img src="resources/images/logo.png" style=""></a>
+			   </div> -->
+			</div>
+			
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="myNav">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href class="dropdown-toggle"	data-toggle="dropdown">
+							Dropdown 1<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li ng-class="{ active: isActive('dashboard.nav1')}" 
+								ng-click="collapseNavigation()">
+								
+								<a ui-sref="dashboard.nav1">nav1</a>
+							</li>
+							<li ng-class="{ active: isActive('dashboard.nav2')}" 
+								ng-click="collapseNavigation()">
+								
+								<a ui-sref="dashboard.nav2">nav2</a>
+							</li>
+						</ul>
+						<li ng-class="{ active: isActive('dashboard.chart')}" 
+							ng-click="collapseNavigation()">
+							
+							<a ui-sref="dashboard.chart">Link</a>
+						</li>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a ui-sref="login">Log Out</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+			
+		</div>
+	</nav>
+</div>

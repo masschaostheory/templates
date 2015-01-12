@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" ng-app="App">
+	<head>
+	    <meta charset="utf-8">
+	    <title>Application</title>
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="resources/lib/ng-grid/ng-grid.css" />
+	    <link rel='stylesheet' href='resources/lib/loadingBar/css/loading-bar.css' />
+	    <link rel="stylesheet" href="resources/lib/bootstrap/css/bootstrap.css" />
+	    <!-- conflicts with paper style. -->
+	    <!-- <link rel="stylesheet" href="resources/lib/bootstrap/css/bootstrap-theme.min.css" /> --> 
+	    <link rel="stylesheet" href="resources/assets/css/app.css" />
+	    <link rel="stylesheet" href="resources/assets/css/animate.css" />
+	    <link rel="stylesheet/less" href="resources/assets/css/style.less">
+	    <link rel="stylesheet" href="resources/lib/toaster/toaster.css" />
+	</head>
+	<body>
+	
+		<toaster-container toaster-options="{'position-class': 'toast-bottom-full-width', 'time-out': 3000, 'close-button':true}"></toaster-container>
+		<div id="masterUI" ui-view="master">
+		</div>
+	
+	    <!-- JQuery -->
+	    <script src="resources/lib/jquery-1.11.1.min.js"
+	        type="text/javascript"></script>
+	     
+	    <!-- Angular -->
+	    <script src="resources/lib/angular/angular.js"
+	        type="text/javascript"></script>
+	    <script src="resources/lib/angular/angular-resource.js"
+	        type="text/javascript"></script>
+	    <script src="resources/lib/angular/angular-route.js"
+	        type="text/javascript"></script>
+	    <script src="resources/lib/angular/angular-cookies.js"></script>
+	    <script src="resources/lib/angular/angular-animate.js" ></script>
+	    
+	    <!-- ng-grid -->
+	    <script src="resources/lib/ng-grid/ng-grid-2.0.11.debug.js"
+	        type="text/javascript"></script><!--  modified this source file. -->
+	    <script src="resources/lib/ng-grid/plugins/ng-grid-csv-export-mod.js"
+	        type="text/javascript"></script><!--  modified this source file. -->
+	    <script src="resources/lib/ng-grid/plugins/ng-grid-flexible-height.js"
+	        type="text/javascript"></script><!-- modified this source file. -->
+	        
+	    <!-- Bootstrap -->
+	    <script src="resources/lib/bootstrap/js/bootstrap.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- Bootstrap UI -->
+	    <script src="resources/lib/ui-bootstrap/ui-bootstrap-tpls-0.11.0.min.js"
+			type="text/javascript"></script><!-- removed C https://github.com/angular-ui/bootstrap/issues/2156 -->
+	    
+	    <!-- UI-Router -->
+	    <script src="resources/lib/ui-router/angular-ui-router.min.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- Loading Bar -->
+	    <script src="resources/lib/loadingBar/js/loading-bar.js"
+	        type="text/javascript"></script>
+	        
+	   	<!-- toaster -->
+		<script src="resources/lib/toaster/toaster.js"
+			type="text/javascript"></script>
+	        
+	    <!-- Scroll Master -->  
+	    <script src="resources/lib/angular-scroll-master/angular-scroll.min.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- less -->
+	    <script src="resources/lib/less/less-1.7.5.min.js"
+	        type="text/javascript"></script>
+	
+	    <!-- Files -->
+	    <script src="resources/app.js" type="text/javascript"></script>
+	    
+	    <!-- Services -->
+	    <script src="resources/shared/GridServices.js"
+	        type="text/javascript"></script>
+	    <script src="resources/shared/MyServices.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- Log In -->
+	    <script src="resources/logIn/LogInController.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- Home -->
+	    <script src="resources/home/HomeController.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- Nav1 -->
+	    <script src="resources/nav1/Nav1Controller.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- Nav2 -->
+	    <script src="resources/nav2/Nav2Controller.js"
+	        type="text/javascript"></script>
+	        
+	    <!-- Directives -->
+	    <script src="resources/shared/gridDirective.js"
+	        type="text/javascript"></script>
+	</body>
+</html>

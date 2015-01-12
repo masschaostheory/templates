@@ -1,0 +1,54 @@
+<div class="login-container" ng-controller="LogInCtrl as logIn">
+	<div class="login-box col-sm-8 col-md-4">
+		<div class="panel panel-primary">
+		
+		 	<div class="panel-heading">
+		        <h3 class="panel-title">{Application Name} Log In</h3>
+		    </div>
+		    
+		    <div class="panel-body">
+		        <form name="form" novalidate role="form" class="form-horizontal"
+	    			ng-submit="form.$valid && logIn.logIn()">
+	    			<fieldset>
+	    			
+						<div class="form-group has-feedback" 
+							ng-class="{'has-error': form.name.$invalid && form.name.$dirty, 
+							'has-success':form.name.$valid && form.name.$dirty}">
+							<label for="user" class="col-lg-3 control-label">User Name</label> 
+							<div class="col-lg-9">
+								<input type="text" ng-model="logIn.userName" name="name"
+									class="form-control" id="username" required>
+								<span class="glyphicon form-control-feedback"
+									ng-class="{'glyphicon-remove': form.name.$invalid && form.name.$dirty, 
+									'glyphicon-ok':form.name.$valid && form.name.$dirty}"></span>
+							</div>
+						</div>
+						
+						<div class="form-group has-feedback"
+							ng-class="{'has-error': form.password.$invalid && form.password.$dirty, 
+							'has-success':form.password.$valid && form.password.$dirty}">
+							<label for="password" class="col-lg-3 control-label">Password</label>
+							<div class="col-lg-9">
+								<input type="password" ng-model="logIn.password" name="password"
+									class="form-control" id="password" required>
+								<span class="glyphicon form-control-feedback"
+									ng-class="{'glyphicon-remove': form.password.$invalid && form.password.$dirty, 
+									'glyphicon-ok':form.password.$valid && form.password.$dirty}"></span>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="col-lg-9 col-lg-offset-3">
+					  			<button type="submit" class="btn btn-primary" ui-sref="dashboard.home">
+					  				Log In
+					  			</button>
+				  			</div>
+						</div>
+						
+					</fieldset>
+				</form>
+		    </div>
+		      	
+		</div>
+	</div>
+</div>
